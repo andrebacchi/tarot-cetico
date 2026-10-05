@@ -921,8 +921,13 @@ async function abrirPartilha() {
     let pode = false;
     try { pode = !!(navigator.canShare && navigator.canShare({ files: [file] })); } catch (_) { /* sem compartilhamento nativo */ }
     // Na pré-visualização em artefato os downloads são bloqueados: lá fica só a imagem, para salvar com um toque longo.
-    $('#partilha-acoes').innerHTML = (pode ? '<button class="btn principal" type="button" id="partilhar">Compartilhar imagem</button>' : '')
-      + (PWA ? `<a class="btn${pode ? '' : ' principal'}" href="${urlPartilha}" download="${arquivo}">Baixar imagem</a>` : '');
+    const acoes = $('#partilha-acoes');
+    acoes.innerHTML = pode ? '<button class="btn principal" type="button" id="partilhar">Compartilhar imagem</button>' : '';
+    if (PWA) {
+      const baixar = Object.assign(document.createElement('a'), { className: 'btn' + (pode ? '' : ' principal'), href: urlPartilha, textContent: 'Baixar imagem' });
+      baixar.download = arquivo;
+      acoes.append(baixar);
+    }
     if (pode) $('#partilhar').onclick = () => navigator.share({ files: [file], title: 'A carta de hoje', text: `A carta de hoje no Tarot Cético: ${nome}. Veja se serve para você também: ${SITE}` }).catch(() => {});
     $('#partilha-ajuda').textContent = PWA ? 'No celular, também dá para segurar o dedo sobre a imagem e salvar ou copiar.'
       : 'Nesta pré-visualização, salve a imagem segurando o dedo sobre ela (ou com o botão direito). No site, há botões para compartilhar e baixar.';
