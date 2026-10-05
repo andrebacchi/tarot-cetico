@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 400">
+<defs>
+<pattern id="t" width="25" height="25" patternUnits="userSpaceOnUse" x="12.5" y="12.5">
+<g fill="none" stroke="#c8a25a" stroke-width=".9" opacity=".5">
+<circle cx="12.5" cy="12.5" r="12.5"/><circle cx="0" cy="0" r="12.5"/><circle cx="25" cy="0" r="12.5"/><circle cx="0" cy="25" r="12.5"/><circle cx="25" cy="25" r="12.5"/>
+</g>
+<circle cx="12.5" cy="12.5" r="1.6" fill="#c8a25a" opacity=".55"/>
+</pattern>
+<g id="o"><circle r="13" fill="#1b1130" stroke="#c8a25a" stroke-width="1.6"/><circle r="8" fill="none" stroke="#c8a25a" stroke-width="1.4"/><circle r="3.6" fill="#c8a25a"/></g>
+</defs>
+<rect width="250" height="400" fill="#1b1130"/>
+<rect x="12.5" y="12.5" width="225" height="375" fill="url(#t)"/>
+<rect x="6" y="6" width="238" height="388" fill="none" stroke="#c8a25a" stroke-width="2.2"/>
+<rect x="12.5" y="12.5" width="225" height="375" fill="none" stroke="#c8a25a" stroke-width="1"/>
+<use href="#o" x="23" y="23"/><use href="#o" x="227" y="23"/><use href="#o" x="23" y="377"/><use href="#o" x="227" y="377"/>
+<circle cx="125" cy="188" r="62" fill="#1b1130" stroke="#c8a25a" stroke-width="2.2"/>
+<circle cx="125" cy="188" r="55" fill="none" stroke="#c8a25a" stroke-width="1"/>
+<path d="M78 188 Q125 148 172 188 Q125 228 78 188Z" fill="none" stroke="#c8a25a" stroke-width="2"/>
+<circle cx="125" cy="188" r="17" fill="none" stroke="#c8a25a" stroke-width="1.6"/>
+<circle cx="125" cy="188" r="7.5" fill="#c8a25a"/>
+<g stroke="#c8a25a" stroke-width="1.6" stroke-linecap="round">
+<path d="M125 140v-8M101 147l-4-7M149 147l4-7M125 236v8M101 229l-4 7M149 229l4 7"/>
+</g>
+</svg>

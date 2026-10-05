@@ -1,0 +1,206 @@
+<div class="app" id="app" lang="pt-BR">
+
+<main class="tela" id="tela-capa">
+<div class="miolo capa">
+  <div class="topo">
+    <a class="marca" href="__HUB__">‹ BACCHI LAB</a>
+    <button class="btn pilula" type="button" id="instalar-btn" hidden>Instalar</button>
+  </div>
+  <header class="abre">
+    <div class="leque" id="leque" aria-hidden="true"></div>
+    <div class="abre-texto">
+      <p class="sobre">Livro-jogo de André D. Bacchi</p>
+      <h1>Tarot Cético</h1>
+      <p class="sub">“Cartomancia” racional</p>
+      <p class="lide">Este tarot não adivinha o futuro. São 81 cartas de arquétipos, falácias, vieses e cenários para criar e desmontar discursos enganosos.</p>
+      <div class="abre-acoes">
+        <button class="btn principal grande" type="button" data-ir="hoje">A carta de hoje</button>
+        <p class="data-hoje" id="capa-data"></p>
+      </div>
+    </div>
+  </header>
+
+  <section class="modos-secao" aria-labelledby="titulo-modos">
+    <div class="modos-topo">
+      <h2 id="titulo-modos">Seis modos de jogo</h2>
+      <button class="btn" type="button" data-regras="">Saiba mais</button>
+    </div>
+    <div class="modos">
+      <div class="grupo">
+        <h3>Para jogar sozinho</h3>
+        <button class="modo" type="button" data-ir="consulta">
+          <span class="num">VI</span><b>Consulte o Tarólogo Cético</b><span class="selo">Abrir</span>
+          <small>Passado, presente e futuro em três cartas. No fim, o truque aparece.</small>
+        </button>
+        <button class="modo" type="button" data-ir="escrita">
+          <span class="num">II</span><b>Escrita Criativa</b><span class="selo">Abrir</span>
+          <small>Um cenário, um arquétipo e três falácias para tecer em um texto de até 500 palavras.</small>
+        </button>
+        <button class="modo" type="button" data-ir="baralho">
+          <span class="num">I</span><b>Leitura</b><span class="selo">Abrir</span>
+          <small>As 81 cartas e o que o livro diz sobre cada uma.</small>
+        </button>
+      </div>
+      <div class="grupo">
+        <h3>Para a sala de aula</h3>
+        <button class="modo" type="button" data-ir="educativo">
+          <span class="num">III</span><b>Modo Educativo</b><span class="selo">Abrir</span>
+          <small>Cada aluno recebe um arquétipo e três falácias e constrói um discurso persuasivo.</small>
+        </button>
+        <button class="modo" type="button" disabled>
+          <span class="num">IV</span><b>Debate</b><span class="selo">Em construção</span>
+          <small>Dois debatedores, um moderador e cinco rodadas com cronômetro e placar.</small>
+        </button>
+        <button class="modo" type="button" disabled>
+          <span class="num">V</span><b>Identificação de Falácias</b><span class="selo">Em construção</span>
+          <small>Os grupos têm seis palpites para descobrir as três falácias escondidas em um discurso.</small>
+        </button>
+        <button class="modo" type="button" disabled>
+          <span class="num">VI</span><b>Tarólogo Cético em duplas</b><span class="selo">Em construção</span>
+          <small>Um aluno lê as cartas, o outro é o cliente.</small>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="rodape">
+    <p>Baseado no livro-jogo <cite>Tarot Cético: “cartomancia” racional</cite> (2023), de André Demambre Bacchi. <a href="__LIVRO__" target="_blank" rel="noopener">Baixe o livro gratuitamente</a>.</p>
+    <p>Os arquétipos são estereótipos extremos e não representam pessoas reais. Uso educacional.</p>
+    <p>© André Demambre Bacchi. Todos os direitos reservados.</p>
+    <p class="versao">Versão __VERSAO__</p>
+  </footer>
+</div>
+</main>
+
+<section class="tela" id="tela-hoje" hidden>
+  <header class="barra">
+    <button class="btn-liso" type="button" data-ir="capa">‹ Início</button>
+    <h2>A carta de hoje</h2>
+    <div class="barra-lado"></div>
+  </header>
+  <div class="mesa" id="hoje-mesa">
+    <p class="hoje-data" id="hoje-data"></p>
+    <div class="hoje-linha">
+      <button class="monte" type="button" id="hoje-monte" aria-label="Baralho de arquétipos, falácias e vieses">
+        <span class="pilha"></span><span>Baralho <b>63</b></span>
+      </button>
+      <div class="vaga"><div class="casa" id="hoje-casa" data-rotulo="Carta de hoje"></div></div>
+    </div>
+  </div>
+  <aside class="oraculo" aria-label="Texto da carta de hoje">
+    <div class="fala" id="hoje-fala" aria-live="polite"></div>
+    <div class="acao" id="hoje-acao"></div>
+  </aside>
+</section>
+
+<section class="tela" id="tela-consulta" hidden>
+  <header class="barra">
+    <button class="btn-liso" type="button" data-ir="capa">‹ Início</button>
+    <h2><span class="so-largo">Consulte o </span>Tarólogo Cético</h2>
+    <div class="barra-lado">
+      <button class="btn-liso" type="button" data-regras="tarologo">Regras</button>
+      <button class="btn-liso" type="button" id="recomecar" aria-label="Recomeçar" title="Recomeçar"><span class="so-largo">Recomeçar</span><span class="so-estreito" aria-hidden="true">↻</span></button>
+    </div>
+  </header>
+  <div class="mesa" id="mesa">
+    <div class="baralhos">
+      <button class="monte" type="button" id="monte-arq" aria-label="Monte de arquétipos">
+        <span class="pilha"></span><span>Arquétipos <b id="conta-arq">27</b></span>
+      </button>
+      <button class="monte" type="button" id="monte-fal" aria-label="Monte de falácias e vieses">
+        <span class="pilha"></span><span>Falácias e vieses <b id="conta-fal">36</b></span>
+      </button>
+    </div>
+    <div class="tiragem" id="tiragem">
+      <div class="posicao"><h3>Passado</h3><div class="casas"><div class="casa"></div><div class="casa-fal"></div></div><p class="legenda"></p></div>
+      <div class="posicao"><h3>Presente</h3><div class="casas"><div class="casa"></div><div class="casa-fal"></div></div><p class="legenda"></p></div>
+      <div class="posicao"><h3>Futuro</h3><div class="casas"><div class="casa"></div><div class="casa-fal"></div></div><p class="legenda"></p></div>
+    </div>
+  </div>
+  <aside class="oraculo" aria-label="Leitura do tarólogo">
+    <div class="fala" id="fala" aria-live="polite"></div>
+    <div class="acao" id="acao"></div>
+  </aside>
+</section>
+
+<section class="tela tela-mao" id="tela-escrita" hidden>
+  <header class="barra">
+    <button class="btn-liso" type="button" data-ir="capa">‹ Início</button>
+    <h2>Escrita Criativa</h2>
+    <div class="barra-lado">
+      <button class="btn-liso" type="button" data-regras="escrita">Regras</button>
+      <button class="btn-liso" type="button" id="esc-recomecar" aria-label="Nova rodada" title="Nova rodada"><span class="so-largo">Nova rodada</span><span class="so-estreito" aria-hidden="true">↻</span></button>
+    </div>
+  </header>
+  <div class="mesa" id="esc-mesa"></div>
+  <aside class="oraculo" aria-label="Oficina de escrita">
+    <div class="fala" id="esc-fala"></div>
+    <div class="acao" id="esc-acao"></div>
+  </aside>
+</section>
+
+<section class="tela tela-mao" id="tela-educativo" hidden>
+  <header class="barra">
+    <button class="btn-liso" type="button" data-ir="capa">‹ Início</button>
+    <h2>Modo Educativo</h2>
+    <div class="barra-lado">
+      <button class="btn-liso" type="button" data-regras="educativo">Regras</button>
+    </div>
+  </header>
+  <div class="saguao-corpo" id="edu-saguao"></div>
+  <div class="mesa" id="edu-mesa"></div>
+  <aside class="oraculo" aria-label="Painel da turma">
+    <div class="fala" id="edu-fala" aria-live="polite"></div>
+    <div class="acao" id="edu-acao"></div>
+  </aside>
+</section>
+
+<section class="tela" id="tela-baralho" hidden>
+  <header class="barra fixa">
+    <button class="btn-liso" type="button" data-ir="capa">‹ Início</button>
+    <h2>O Baralho</h2>
+    <div class="barra-lado"><button class="btn-liso" type="button" data-regras="leitura">Regras</button></div>
+  </header>
+  <div class="miolo">
+    <div class="filtros" id="filtros"></div>
+    <div class="grade" id="grade"></div>
+  </div>
+</section>
+
+</div>
+
+<dialog class="ficha moldura" id="ficha" aria-label="Carta">
+  <div class="fechar-linha"><button class="btn fechar" type="button" data-fechar>Fechar</button></div>
+  <div class="ficha-corpo" id="ficha-corpo"></div>
+</dialog>
+
+<dialog class="folha truque moldura" id="truque" aria-label="O truque">
+  <div class="fechar-linha"><button class="btn fechar" type="button" data-fechar>Fechar</button></div>
+  <div class="truque-corpo" id="truque-corpo"></div>
+</dialog>
+
+<dialog class="folha moldura" id="avaliacao" aria-label="Autoavaliação">
+  <div class="fechar-linha"><button class="btn fechar" type="button" data-fechar>Fechar</button></div>
+  <div class="truque-corpo" id="avaliacao-corpo"></div>
+</dialog>
+
+<dialog class="folha regras moldura" id="regras" aria-label="Modos de jogo">
+  <div class="fechar-linha"><button class="btn fechar" type="button" data-fechar>Fechar</button></div>
+  <div class="truque-corpo" id="regras-corpo"></div>
+</dialog>
+
+<dialog class="folha moldura" id="partilha" aria-label="Compartilhar a carta de hoje">
+  <div class="fechar-linha"><button class="btn fechar" type="button" data-fechar>Fechar</button></div>
+  <div class="truque-corpo" id="partilha-corpo"></div>
+</dialog>
+
+<dialog class="folha moldura" id="instalar" aria-label="Instalar o Tarot Cético">
+  <div class="fechar-linha"><button class="btn fechar" type="button" data-fechar>Fechar</button></div>
+  <div class="truque-corpo">
+    <p class="chapa">Aplicativo</p>
+    <h3>Instalar o Tarot Cético</h3>
+    <p>O Tarot Cético fica na tela inicial como um aplicativo, abre em tela cheia e funciona sem internet depois da primeira visita.</p>
+    <div class="abas" id="abas"></div>
+    <ol class="passos" id="passos"></ol>
+  </div>
+</dialog>

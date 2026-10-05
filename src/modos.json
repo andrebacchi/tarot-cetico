@@ -1,0 +1,265 @@
+[
+ {
+  "id": "leitura",
+  "titulo": "Modo Solo de Leitura",
+  "blocos": [
+   {
+    "t": "p",
+    "x": "Neste primeiro modo, você tem a flexibilidade de usar o Tarot Cético tanto como um livro convencional para aprimorar sua compreensão sobre falácias lógicas e vieses cognitivos, quanto como um guia de consulta rápida para situações específicas. Este modo é perfeito para aqueles que preferem um estudo autodirigido e aprofundado, mas também para aqueles que precisam de respostas rápidas e diretas. Você pode mergulhar detalhadamente em cada arquétipo, falácia ou viés, explorando-os à sua escolha e construindo um entendimento profundo de como operam em diferentes contextos."
+   },
+   {
+    "t": "p",
+    "x": "Ao mesmo tempo, este material é organizado de tal forma que não exige leitura sequencial; você pode facilmente pular para qualquer seção que chame sua atenção ou que seja relevante para uma situação atual. Essa versatilidade torna o Tarot Cético um recurso valioso tanto para estudo contínuo quanto para referência imediata, auxiliando na identificação de argumentos falaciosos e no aprimoramento de suas habilidades de raciocínio crítico."
+   }
+  ]
+ },
+ {
+  "id": "escrita",
+  "titulo": "Modo Solo de Escrita Criativa",
+  "blocos": [
+   {
+    "t": "p",
+    "x": "Neste modo, você é ao mesmo tempo o escritor e o crítico. Primeiro, sorteie uma carta de cenário e uma de arquétipo para estabelecer o contexto e o personagem central de sua história ou argumento. Em seguida, puxe três cartas de falácias/vieses que você deverá tecer sutilmente em seu texto. Agora, o desafio: escreva um texto (no estilo literário que achar mais interessante), integrando as falácias e vieses que você sorteou ao arquétipo e cenários definidos. Para dar um toque de realismo, você pode impor um limite de tempo (como 15 minutos) ou um limite de palavras (por exemplo, 500 palavras) para completar seu texto."
+   },
+   {
+    "t": "p",
+    "x": "Depois de escrever, faça uma autoavaliação. Releia seu texto e identifique os pontos onde você incorporou cada falácia ou viés. Pergunte a si mesmo: o argumento ficou convincente? As falácias e vieses foram habilmente camuflados ou ficaram muito óbvios?"
+   }
+  ]
+ },
+ {
+  "id": "educativo",
+  "titulo": "Modo Educativo",
+  "blocos": [
+   {
+    "t": "p",
+    "x": "Este terceiro modo é ideal para contextos educativos, como salas de aula, workshops ou até mesmo reuniões informais. Neste modo, cada jogador recebe uma carta de arquétipo e três cartas de falácias/vieses. O objetivo é construir um discurso persuasivo que incorpore as falácias e vieses sorteados, sob o manto do arquétipo escolhido."
+   },
+   {
+    "t": "p",
+    "x": "Esta atividade permite uma abordagem prática e interativa para entender como as falácias e vieses podem ser habilmente inseridos em argumentações e, mais importante, como reconhecê-los. Um instrutor ou professor pode guiar a discussão, oferecer feedback imediato e sugerir atividades ou questões de discussão adicionais para aprofundar a compreensão do grupo. Use este livro para acessar as explicações teóricas e exemplos práticos para que os jogadores possam entender o contexto e as implicações das falácias e vieses que estão utilizando. Este modo de jogo torna o aprendizado das complexidades do raciocínio crítico tanto envolvente quanto educativo."
+   },
+   {
+    "t": "p",
+    "rot": "Exemplo",
+    "x": "Você sorteia a carta de arquétipo \"Terapeuta Holística\" e as cartas de falácias e vieses \"Apelo à Tradição\", \"Falsa Dicotomia\" e \"Viés de Confirmação\". Agora você deve criar um discurso persuasivo incorporando essas falácias e vieses, mantendo-se fiel ao arquétipo da \"Terapeuta Holística\"."
+   },
+   {
+    "t": "p",
+    "x": "Imagine que o discurso ficou assim: \"Olá, queridos. Como terapeuta holística, eu posso afirmar que a medicina moderna tem falhado em tratar as pessoas de maneira completa. Afinal, nossas tradições ancestrais têm oferecido curas naturais por milhares de anos (Apelo à Tradição). Devemos continuar tomando remédios farmacêuticos que tratam apenas os sintomas e possuem efeitos colaterais, ou abraçar a medicina holística que trata corpo, mente e espírito? (Falsa Dicotomia) Isso apenas reforça o que eu sempre observo: pessoas todos os dias que experimentaram o poder da medicina holística nunca mais voltaram à medicina tradicional (Viés de Confirmação).\""
+   },
+   {
+    "t": "p",
+    "x": "Neste discurso, você identificou claramente as falácias e vieses, permitindo uma discussão em grupo ou feedback do facilitador sobre como essas estratégias de persuasão são usadas na vida real e como identificá-las criticamente."
+   },
+   {
+    "t": "p",
+    "rot": "Regra Opcional com Cartas de Cenário",
+    "x": "Neste modo de jogo, você também tem a opção de adicionar uma camada extra de complexidade e relevância à atividade usando cartas de cenário. Essas cartas apresentam temas específicos que devem ser o foco do discurso gerado. Por exemplo, se você puxar a carta de cenário \"Saúde Mental\", o discurso deve ser moldado para se adequar a esse contexto."
+   }
+  ]
+ },
+ {
+  "id": "debate",
+  "titulo": "Modo Debate",
+  "blocos": [
+   {
+    "t": "p",
+    "x": "Neste modo, dois jogadores participam de um debate público fictício, defendendo pontos de vistas diferentes sobre um mesmo tema. Um terceiro jogador atua como moderador e apresentador do debate."
+   },
+   {
+    "t": "h",
+    "x": "Início"
+   },
+   {
+    "t": "li",
+    "rot": "Seleção de Arquétipos",
+    "x": "Cada participante (exceto o moderador) realiza o sorteio de um arquétipo representativo estabelecendo o papel que assumirá no debate."
+   },
+   {
+    "t": "li",
+    "rot": "Determinação do Tema/Cenário",
+    "x": "Uma carta representando o cenário do debate é sorteada para estabelecer o contexto em que os argumentos serão enquadrados."
+   },
+   {
+    "t": "h",
+    "x": "Turno do Jogo/Rodada"
+   },
+   {
+    "t": "li",
+    "rot": "Compra de Cartas de Falácia/Viés",
+    "x": "No início de cada rodada, cada jogador (exceto o moderador) compra uma nova carta de falácia ou viés."
+   },
+   {
+    "t": "li",
+    "rot": "Tempo de Preparação",
+    "x": "Cada jogador tem um minuto para olhar sua carta e pensar em um argumento que utilize esta falácia ou viés."
+   },
+   {
+    "t": "li",
+    "rot": "Apresentação",
+    "x": "Os jogadores têm dois minutos cada para apresentar seus argumentos, incorporando a carta de falácia/viés sorteada no contexto do seu arquétipo e do cenário do debate."
+   },
+   {
+    "t": "p",
+    "rot": "Moderação",
+    "x": "O moderador usa um cronômetro para manter o controle do tempo e ao final de cada turno estabelece o argumento vencedor, conferindo 1 ponto para o debatedor que ofereceu o argumento mais convincente."
+   },
+   {
+    "t": "p",
+    "rot": "Número de rodadas",
+    "x": "O jogo é composto por 5 rodadas para determinar o vencedor (cada rodada valendo 1 ponto, conferido pelo moderador ao final de cada turno). Ao final das 5 rodadas, vence o debate quem teve a maior pontuação."
+   },
+   {
+    "t": "h",
+    "x": "Variações e elementos opcionais"
+   },
+   {
+    "t": "li",
+    "rot": "Participação da Audiência",
+    "x": "Caso haja espectadores, estes podem funcionar como um júri, votando em quem consideram o vencedor de cada rodada, substituindo a pontuação do moderador."
+   },
+   {
+    "t": "li",
+    "rot": "Incorporação de Elementos de Risco",
+    "x": "Antes de iniciar seus argumentos, os participantes podem optar por lançar um dado de 6 faces. O número resultante será adicionado aos seus pontos se vencerem a rodada, mas será subtraído caso percam."
+   },
+   {
+    "t": "li",
+    "rot": "Escolha do Moderador para Cenários e Desafios",
+    "x": "Em vez de depender do acaso para a seleção do cenário, o moderador pode determinar um cenário específico ou mesmo distribuir as cartas de falácias ou vieses que achar mais interessante aos participantes do debate. Dessa forma, quem irá impor o ritmo do debate será o moderador."
+   }
+  ]
+ },
+ {
+  "id": "identificacao",
+  "titulo": "Modo Identificação de Falácias",
+  "blocos": [
+   {
+    "t": "p",
+    "x": "Este modo funciona de forma similar ao jogo \"Imagem e Ação\" e é ideal para grupos. Envolve a identificação rápida de falácias e vieses em argumentos."
+   },
+   {
+    "t": "h",
+    "x": "Configuração Inicial"
+   },
+   {
+    "t": "li",
+    "rot": "Divisão de Grupos",
+    "x": "Separe dois ou mais participantes em dois ou mais grupos."
+   },
+   {
+    "t": "li",
+    "rot": "Seleção de Arquétipo",
+    "x": "Cada jogador sorteia um arquétipo que irá incorporar durante todo o jogo."
+   },
+   {
+    "t": "h",
+    "x": "Turno/Rodada"
+   },
+   {
+    "t": "li",
+    "rot": "Grupo A começa",
+    "x": "Um membro do Grupo A sorteia três cartas de falácias e vieses (e não pode revelar para ninguém, nem mesmo para seu próprio grupo)."
+   },
+   {
+    "t": "li",
+    "rot": "Tempo de Argumentação",
+    "x": "O jogador tem 2 minutos para organizar e apresentar um argumento sobre qualquer tema, incorporando as falácias/vieses sorteados com o seu arquétipo."
+   },
+   {
+    "t": "li",
+    "rot": "Adivinhação do Grupo A",
+    "x": "Os demais membros do Grupo A tentam descobrir/identificar as falácias e vieses usados pelo jogador. Para isso, eles podem dar, no máximo, 6 sugestões."
+   },
+   {
+    "t": "li",
+    "rot": "Pontuação",
+    "x": "O grupo ganha um ponto para cada falácia ou viés corretamente identificado, dentro do limite de tempo. Um ponto bônus é concedido se as três falácias/vieses forem identificadas corretamente."
+   },
+   {
+    "t": "li",
+    "rot": "Turno do Grupo B",
+    "x": "O Grupo B repete os passos 1 a 3. E assim por diante."
+   },
+   {
+    "t": "li",
+    "rot": "Término",
+    "x": "Continue alternando entre os grupos até que um dos grupos atinja 15 pontos e seja considerado o vencedor."
+   },
+   {
+    "t": "p",
+    "rot": "Elemento de Risco opcional (Regra opcional)",
+    "x": "Antes de iniciar seus argumentos, o jogador pode optar por lançar um dado de 6 faces. O número resultante será adicionado aos seus pontos se o grupo acertar as 3 falácias/vieses, mas será subtraído de sua pontuação caso isso não ocorra."
+   }
+  ]
+ },
+ {
+  "id": "tarologo",
+  "titulo": "Modo Tarólogo Cético",
+  "blocos": [
+   {
+    "t": "p",
+    "x": "O sexto e último modo, intitulado \"Tarólogo Cético,\" oferece uma abordagem humorística e cética às leituras de tarot, servindo como um exercício divertido e educativo. Antes de prosseguir para as regras, é crucial entendermos o \"Efeito Forer,\" um fenômeno psicológico que descreve a tendência das pessoas de atribuírem precisão a descrições de personalidade que são, na realidade, vagas e generalizadas. No contexto do Tarólogo Cético, esse efeito será habilmente utilizado para criar \"leituras\" que, embora imprecisas, possam parecer surpreendentemente acertadas."
+   },
+   {
+    "t": "p",
+    "x": "O \"Efeito Forer,\" também conhecido como \"Efeito Barnum,\" é um fenômeno psicológico que se refere à tendência das pessoas de considerar descrições vagas e generalizadas sobre a personalidade como altamente precisas para si próprias. Este efeito leva a acreditarmos que afirmações genéricas, que na verdade poderiam aplicar-se a uma grande parte da população, são específicas e exclusivas para nós."
+   },
+   {
+    "t": "h",
+    "x": "Como o Efeito Forer Funciona?"
+   },
+   {
+    "t": "p",
+    "x": "Imagine que você recebe uma \"análise de personalidade\" que diz: \"Você tem uma grande necessidade de outras pessoas gostarem e admirarem você. No entanto, você tende a ser crítico consigo mesmo. Embora tenha algumas fraquezas de personalidade, geralmente é capaz de compensá-las.\" Você provavelmente pensará que a descrição é precisa e se aplica bem a você, quando, na realidade, ela é tão vaga que poderia aplicar-se a quase qualquer pessoa."
+   },
+   {
+    "t": "h",
+    "x": "Aplicação no Tarólogo Cético"
+   },
+   {
+    "t": "p",
+    "x": "No contexto do modo \"Tarólogo Cético,\" o Efeito Forer é utilizado para criar \"leituras\" de cartas que, embora amplas e imprecisas, parecem ser surpreendentemente pertinentes ao \"Cliente.\" O Tarólogo Cético pode fazer afirmações vagas e generalizadas que, graças ao Efeito Forer, parecerão muito mais perspicazes e específicas do que realmente são. Assim, mesmo que a \"leitura\" seja feita de forma humorística e com o uso de falácias, o \"Cliente\" pode ainda encontrar significados \"precisos\" que ressoam com sua própria experiência, tornando o jogo divertido e misteriosamente acertado."
+   },
+   {
+    "t": "h",
+    "x": "Designação dos Papéis"
+   },
+   {
+    "t": "li",
+    "rot": "Tarólogo Cético",
+    "x": "Um jogador assume este papel, responsável por conduzir a \"leitura\" das cartas."
+   },
+   {
+    "t": "li",
+    "rot": "Cliente",
+    "x": "O outro jogador é o \"Cliente,\" que procura insights ou, mais provavelmente, um bom entretenimento."
+   },
+   {
+    "t": "h",
+    "x": "Fase de Jogo"
+   },
+   {
+    "t": "h",
+    "x": "Revelação das Cartas"
+   },
+   {
+    "t": "li",
+    "x": "O \"Cliente\" saca três cartas de arquétipos e as coloca na mesa, representando seu \"Passado,\" \"Presente\" e \"Futuro.\""
+   },
+   {
+    "t": "li",
+    "x": "O \"Tarólogo Cético\" saca uma carta de falácia/viés para cada arquétipo virado."
+   },
+   {
+    "t": "h",
+    "x": "Interpretação"
+   },
+   {
+    "t": "p",
+    "x": "Usando as cartas de arquétipos e falácias/vieses, o Tarólogo Cético realiza uma leitura exagerada e bem-humorada, se aproveitando do efeito Forer, para fazer inferências sobre o passado, o presente e o futuro do seu cliente baseadas nas características dos arquétipos (descritas no Capítulo 2) e das fálacias e vieses (descritas nos capítulos 3 e 4). Esse é um exercício extremamente livre e criativo, no qual não existe certo ou errado. O foco é a descontração e diversão. Ao final, o \"Cliente\" pode refletir sobre a precisão cômica (ou a falta dela) da leitura feita pelo Tarólogo Cético."
+   }
+  ]
+ }
+]

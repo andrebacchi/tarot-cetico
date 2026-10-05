@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<defs>
+<radialGradient id="f" cx="50%" cy="22%" r="85%"><stop offset="0" stop-color="#5a3a86"/><stop offset=".55" stop-color="#2c1a47"/><stop offset="1" stop-color="#170e27"/></radialGradient>
+</defs>
+<rect width="512" height="512" fill="url(#f)"/>
+<g id="desenho" transform="translate(256 256) scale(1.12) translate(-262 -260)">
+<g transform="rotate(13 300 300)">
+<rect x="196" y="112" width="186" height="298" rx="15" fill="#f1e7d0"/>
+<rect x="209" y="125" width="160" height="272" rx="8" fill="none" stroke="#18121e" stroke-width="5"/>
+</g>
+<g transform="rotate(-9 240 262)">
+<rect x="140" y="100" width="200" height="320" rx="16" fill="#1b1130" stroke="#d9b46a" stroke-width="9"/>
+<rect x="157" y="117" width="166" height="286" rx="8" fill="none" stroke="#d9b46a" stroke-width="3" opacity=".75"/>
+<path d="M172 260 Q240 198 308 260 Q240 322 172 260Z" fill="none" stroke="#ecd29a" stroke-width="10" stroke-linejoin="round"/>
+<circle cx="240" cy="260" r="27" fill="none" stroke="#ecd29a" stroke-width="8"/>
+<circle cx="240" cy="260" r="11" fill="#ecd29a"/>
+<g stroke="#d9b46a" stroke-width="7" stroke-linecap="round"><path d="M240 178v-22M201 190l-10-19M279 190l10-19M240 342v22M201 330l-10 19M279 330l10 19"/></g>
+</g>
+</g>
+</svg>

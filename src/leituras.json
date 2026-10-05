@@ -1,0 +1,183 @@
+{
+ "_nota": "Textos novos do modo Tarólogo Cético (não estão no livro). 'arquetipos' são frases vagas, no estilo do Efeito Forer, para passado, presente e futuro. 'argumentos' são falas do tarólogo cometendo cada falácia ou viés.",
+ "anuncio": {
+  "passado": ["No seu passado, as cartas mostram {quem}.", "Olhando para trás, quem aparece é {quem}."],
+  "presente": ["No seu presente, quem se revela é {quem}.", "Hoje, a carta que acompanha você é {quem}."],
+  "futuro": ["E no seu futuro surge {quem}.", "Mais adiante, as cartas apontam {quem}."]
+ },
+ "arquetipos": {
+  "astrologo": {
+   "passado": "Houve um tempo em que você procurou sinais para decidir alguma coisa importante, e encontrou. Quem procura padrões sempre encontra.",
+   "presente": "Você anda tentando entender por que certas coisas acontecem justamente com você. Existe uma explicação, e ela é mais simples do que você gostaria.",
+   "futuro": "Um ciclo se fecha nos próximos meses e outro começa. Você vai reconhecer o momento quando ele chegar, ou logo depois."
+  },
+  "atriz-famosa": {
+   "passado": "Você já precisou sorrir em uma ocasião em que não tinha vontade nenhuma. Ninguém percebeu, ou quase ninguém.",
+   "presente": "As pessoas veem em você uma segurança que nem sempre existe por dentro. Você representa bem esse papel.",
+   "futuro": "Vem aí um momento em que os olhares vão se voltar para você. Uma parte sua quer isso, a outra preferia ficar em casa."
+  },
+  "cetico-militante": {
+   "passado": "Você já ganhou uma discussão e, mesmo assim, saiu dela pior do que entrou. Ter razão custou mais caro do que parecia.",
+   "presente": "Você tem pouca paciência para conversa fiada, mas às vezes se pergunta se não está sendo duro demais com alguém.",
+   "futuro": "Alguém vai dizer uma bobagem enorme na sua frente. Você terá de escolher entre corrigir e manter a paz, e a escolha vai dizer muito sobre você."
+  },
+  "cientista-desiludido": {
+   "passado": "Você já se dedicou muito a algo que não deu o retorno que merecia. Ficou uma ponta de mágoa que você prefere não comentar.",
+   "presente": "Você sente que seu esforço nem sempre é reconhecido por quem deveria reconhecer. Mesmo assim, continua.",
+   "futuro": "Um projeto antigo, que você tinha deixado de lado, volta a fazer sentido. Dessa vez você vai olhar para ele de outro jeito."
+  },
+  "consteladora-familiar": {
+   "passado": "Há uma questão de família que ficou mal resolvida. Você pensa nela menos do que antes, mas ela ainda aparece em certas datas.",
+   "presente": "Você carrega expectativas que não são exatamente suas. Alguém próximo espera de você algo que nunca disse em voz alta.",
+   "futuro": "Uma conversa adiada há muito tempo finalmente acontece. Ela será mais curta e menos dramática do que você ensaiou."
+  },
+  "conspiracionista": {
+   "passado": "Você já desconfiou de uma história que todos aceitavam sem questionar. Em pelo menos uma dessas vezes, você tinha razão.",
+   "presente": "Você sente que há algo que não estão contando a você. No trabalho, na família ou entre amigos, alguém sabe mais do que diz.",
+   "futuro": "Uma coincidência vai chamar sua atenção em breve. Você vai tentar ligar os pontos, e eles vão se ligar com uma facilidade suspeita."
+  },
+  "digital-influencer": {
+   "passado": "Você já fez alguma coisa mais pela foto do que pela coisa em si. Na hora pareceu importante.",
+   "presente": "Você se compara com a vida dos outros mais do que gostaria de admitir, e quase sempre perde para alguém que também está fingindo.",
+   "futuro": "Algo que você disser ou mostrar terá mais alcance do que você imagina. Escolha bem, porque o público nem sempre é quem se espera."
+  },
+  "empreendedor-de-startup": {
+   "passado": "Você já teve uma ideia que parecia genial às duas da manhã. De dia ela ficou um pouco menor, mas você ainda gosta dela.",
+   "presente": "Você tem mais planos do que tempo. Alguns estão parados esperando o momento certo, que insiste em não chegar.",
+   "futuro": "Uma oportunidade aparece disfarçada de trabalho extra. Você vai precisar decidir rápido, com menos informação do que gostaria."
+  },
+  "fanatico-religioso": {
+   "passado": "Você já defendeu uma certeza com mais força do que ela merecia. Hoje a defenderia com outras palavras, ou nem defenderia.",
+   "presente": "Existe um assunto sobre o qual você não aceita discussão. Quem convive com você já aprendeu a não tocar nele.",
+   "futuro": "Uma convicção sua será posta à prova. Você vai sair dela diferente, ainda que não admita isso para ninguém."
+  },
+  "filosofo": {
+   "passado": "Você já perdeu uma boa oportunidade por pensar demais antes de agir. Ainda refaz essa conta de vez em quando.",
+   "presente": "Você faz perguntas para as quais ninguém à sua volta parece ter paciência. Isso às vezes deixa você só no meio de muita gente.",
+   "futuro": "Uma dúvida que acompanha você há anos vai ganhar uma resposta. Não será a que você procurava, mas vai servir."
+  },
+  "guru-de-autoajuda": {
+   "passado": "Alguém já deu a você um conselho simples para um problema complicado. Você tentou seguir, não deu certo e achou que a culpa era sua.",
+   "presente": "As pessoas procuram você para pedir conselhos que você mesmo não segue. Você cuida melhor dos outros do que de si.",
+   "futuro": "Você está prestes a mudar um hábito. A mudança será menor do que a promessa, e mesmo assim vai valer a pena."
+  },
+  "historiador-revisionista": {
+   "passado": "Há um episódio da sua vida que você conta de um jeito um pouco melhor do que ele aconteceu. A versão nova já quase virou a oficial.",
+   "presente": "Você tem relido uma decisão antiga com os olhos de hoje. A história é a mesma, mas o seu papel nela anda mudando.",
+   "futuro": "Alguém vai contar uma história em que você aparece, e você não vai se reconhecer nela. As duas versões têm um fundo de verdade."
+  },
+  "jornalista-sensacionalista": {
+   "passado": "Você já aumentou uma história para ela ficar mais interessante. Funcionou tão bem que hoje nem lembra onde termina o fato.",
+   "presente": "Uma preocupação pequena anda ocupando espaço de manchete na sua cabeça. Vista de perto, ela caberia em uma nota de rodapé.",
+   "futuro": "Uma notícia inesperada chega nas próximas semanas. No primeiro momento ela vai parecer muito maior do que realmente é."
+  },
+  "jovem-mistico": {
+   "passado": "Você já acreditou em algo de todo o coração e depois ficou com um pouco de vergonha. Ainda guarda carinho por aquela fase.",
+   "presente": "Você sente que falta um sentido maior em parte da sua rotina. Tem procurado isso em lugares diferentes, sem contar a todo mundo.",
+   "futuro": "Você vai encontrar um grupo ou uma pessoa com quem tudo parece se encaixar. Aproveite, mas leia as letras miúdas."
+  },
+  "life-coach": {
+   "passado": "Você já prometeu a si mesmo uma grande mudança em uma segunda-feira. Parte dela aconteceu, o resto ficou para a segunda seguinte.",
+   "presente": "Você tem um potencial que ainda não foi totalmente aproveitado. Sabe disso e se cobra mais do que deveria.",
+   "futuro": "Uma meta que parecia distante fica mais perto. Ainda falta um passo, e ele depende mais de você do que das circunstâncias."
+  },
+  "medico-bombado": {
+   "passado": "Você já exagerou tentando cuidar de si. Dieta, treino ou trabalho, alguma coisa passou do ponto antes de voltar ao lugar.",
+   "presente": "Você se preocupa com a imagem que passa mais do que demonstra. Por fora parece tudo forte, por dentro há um cansaço que poucos notam.",
+   "futuro": "Seu corpo vai mandar um recado em breve. Nada grave, só um daqueles avisos que a gente costuma ignorar duas vezes antes de ouvir."
+  },
+  "militante-ideologico": {
+   "passado": "Você já se afastou de alguém por causa de uma opinião. Na época pareceu inevitável, hoje você não tem tanta certeza.",
+   "presente": "Você anda dividindo o mundo em dois grupos com mais frequência do que percebe. Um deles, por coincidência, é sempre o seu.",
+   "futuro": "Você vai descobrir que concorda com alguém de quem discorda em quase tudo. O incômodo vai durar alguns dias."
+  },
+  "nutrologa-ortomolecular": {
+   "passado": "Você já comprou uma solução milagrosa. Suplemento, curso ou aparelho de ginástica, ela ainda está em algum armário da casa.",
+   "presente": "Você sente que falta alguma coisa para chegar ao seu equilíbrio ideal. Só não sabe dizer exatamente o quê.",
+   "futuro": "Alguém vai oferecer a você uma fórmula sob medida para um problema que você nem sabia que tinha. Você vai ficar tentado."
+  },
+  "patriota": {
+   "passado": "Você já defendeu o seu grupo mesmo sabendo que ele estava errado. A lealdade falou mais alto, e uma parte sua se orgulha disso.",
+   "presente": "Você reclama das suas origens, mas não admite que gente de fora faça o mesmo. Há um lugar ao qual você pertence mais do que diz.",
+   "futuro": "Você será chamado a escolher um lado. Vai escolher o de sempre, mas dessa vez vai pensar um pouco antes."
+  },
+  "politico-negacionista": {
+   "passado": "Você já negou uma coisa que estava bem na sua frente. Levou tempo até admitir, e a admissão foi só para você.",
+   "presente": "Há um problema que você tem tratado como se não existisse. Ele continua lá, esperando educadamente a vez dele.",
+   "futuro": "Você vai precisar explicar uma decisão. A primeira versão da explicação vai colocar a culpa em outra pessoa."
+  },
+  "professor-inquestionavel": {
+   "passado": "Alguém com autoridade já fez você se sentir pequeno por fazer uma pergunta. Você nunca esqueceu, e isso moldou o seu jeito de falar.",
+   "presente": "Em pelo menos um assunto, você tem certeza de que sabe mais do que os outros. Em geral tem razão, o que só piora as coisas.",
+   "futuro": "Alguém mais novo vai corrigir você, e vai estar certo. Sua reação nos primeiros cinco segundos será decisiva."
+  },
+  "relativista-epistemologico": {
+   "passado": "Você já ficou em cima do muro para não desagradar ninguém. Conseguiu desagradar os dois lados com muita elegância.",
+   "presente": "Você consegue ver razão em pontos de vista opostos. Isso faz de você uma pessoa justa e, na hora de escolher o restaurante, insuportável.",
+   "futuro": "Uma decisão vai exigir que você diga que uma coisa é melhor do que a outra. Você vai conseguir, com algum sofrimento."
+  },
+  "terapeuta-holistica": {
+   "passado": "Você já tentou resolver uma dor do corpo que, no fundo, vinha de outro lugar. Demorou a perceber de onde.",
+   "presente": "Corpo, cabeça e rotina andam fora de sintonia. Você sabe qual dos três está pedindo atenção, mas tem cuidado dos outros dois.",
+   "futuro": "Você vai encontrar um jeito de se sentir mais inteiro. Ele será mais simples e mais barato do que os que vão tentar vender a você."
+  },
+  "tio-do-zap": {
+   "passado": "Você já passou adiante uma informação sem conferir. Alguém acreditou em você e até hoje não sabe disso.",
+   "presente": "Há um grupo de mensagens que você pensa em abandonar toda semana. Continua nele por um motivo que não sabe explicar.",
+   "futuro": "Uma mensagem inesperada vai chegar. Leia até o fim antes de responder, e pense duas vezes antes de encaminhar."
+  },
+  "ufologo": {
+   "passado": "Você já viu ou viveu algo que não soube explicar. Contou para poucas pessoas e ainda pensa nisso de vez em quando.",
+   "presente": "Você tem a sensação de que existe mais do que se vê. Às vezes olha para o céu, ou para o teto, esperando uma resposta.",
+   "futuro": "Algo fora do comum vai cruzar o seu caminho. Você vai querer que seja extraordinário, mas a explicação mais provável será bem simples."
+  },
+  "vendedor": {
+   "passado": "Você já foi convencido a levar algo de que não precisava. Na saída, ainda agradeceu.",
+   "presente": "Alguém está tentando convencer você de alguma coisa neste momento. Pode ser uma pessoa, um anúncio ou você mesmo.",
+   "futuro": "Uma oferta com prazo curto vai aparecer. A pressa será de quem oferece, não sua."
+  },
+  "vovo": {
+   "passado": "Um conselho antigo, de alguém mais velho, ficou com você. Você não sabe se ele é verdadeiro, mas obedece até hoje.",
+   "presente": "Você repete hábitos de família sem perceber. Um deles apareceu esta semana e você nem notou.",
+   "futuro": "Um dia você vai se pegar dizendo uma frase que jurou nunca dizer. Será idêntica à de alguém que criou você."
+  }
+ },
+ "argumentos": {
+  "ad-hominem": "Se alguém disser a você que isto é bobagem, repare em quem está dizendo: gente amarga, que nunca acertou nem a previsão do tempo.",
+  "ambiguidade": "As cartas dizem que você vai passar por uma mudança. Pode ser de casa, de emprego, de opinião ou de canal. Mudança é mudança, e eu nunca erro.",
+  "apelo-a-piedade": "Estudei estas cartas durante anos, abri mão de fins de semana e de uma carreira estável. Depois de tudo isso, você teria coragem de duvidar de mim?",
+  "apelo-a-tradicao": "Pode confiar: lê-se a sorte nas cartas há mais de quinhentos anos. Se não funcionasse, já teriam parado.",
+  "apelo-ao-medo": "Eu não ignoraria este aviso. Já vi gente sair daqui rindo das cartas, e prefiro nem contar o que aconteceu depois.",
+  "apelo-ao-natural": "Este baralho é de papel, que vem da árvore, sem nada de artificial. O que vem da natureza não tem como enganar você.",
+  "argumento-de-intimidacao": "Só uma pessoa muito ingênua duvidaria de uma leitura tão clara. Você não quer ser essa pessoa, quer?",
+  "argumento-de-autoridade": "Quem afirma isso não sou eu, é um mestre com três diplomas de tarologia quântica. Com um currículo desses, não cabe discussão.",
+  "bola-de-neve": "Se você ignorar esta carta, primeiro perde o sono, depois o emprego, depois os amigos, e em menos de um ano estará morando sozinho em uma cabana, conversando com as galinhas.",
+  "causa-falsa": "A última pessoa que tirou esta carta recebeu um aumento na semana seguinte. Carta na mesa, aumento na conta. Mais claro que isso, impossível.",
+  "cherry-picking": "De tudo o que eu disse, guarde as partes que acertaram. As outras foram só aquecimento e não contam.",
+  "composicao": "Cada frase desta leitura faz sentido sozinha. Logo, a leitura inteira só pode estar certa.",
+  "divisao": "O tarot é uma arte sábia e milenar. Portanto, cada palavra que sai da minha boca é sábia e milenar também.",
+  "escoces-de-verdade": "Nenhuma leitura de verdade erra. Se esta errar, é porque não era uma leitura de verdade, e a culpa passa a ser do baralho.",
+  "espantalho": "Os céticos dizem que nada no universo tem sentido e que você é só um amontoado de átomos sem futuro. Entre isso e as cartas, fico com as cartas.",
+  "evidencia-anedotica": "Minha prima tirou esta mesma carta e, no mês seguinte, conheceu o marido. Para mim, isso encerra o assunto.",
+  "falacia-de-nirvana": "A ciência não sabe explicar tudo. Já que ela não é perfeita, melhor ficar com as cartas, que pelo menos são bonitas.",
+  "falacia-do-jogador": "Você vem de uma sequência longa de dias ruins. Portanto, pelas leis do universo, agora só pode vir coisa boa.",
+  "falsa-dicotomia": "Diante disso, você tem dois caminhos: acreditar nas cartas ou viver para sempre na dúvida. Não existe terceira opção.",
+  "falsa-simetria": "A ciência tem os estudos dela, eu tenho o meu baralho. São duas opiniões, e cada uma merece exatamente metade do seu respeito.",
+  "generalizacao-precipitada": "Já atendi três pessoas com esta carta e as três eram teimosas. Portanto, todo mundo que tira esta carta é teimoso, inclusive você.",
+  "incredulidade-pessoal": "Eu simplesmente não consigo imaginar que esta carta tenha saído por acaso. Se eu não consigo imaginar, é porque não foi.",
+  "inversao-do-onus-da-prova": "Não acredita? Então prove que as cartas estão erradas. Enquanto não provar, vale o que eu disse.",
+  "popularidade": "Milhões de pessoas consultam o tarot todos os dias. Tanta gente assim não pode estar enganada ao mesmo tempo.",
+  "red-herring": "Você deve estar se perguntando como eu sei disso tudo. Aliás, que linda a cor da sua aura hoje. Você tem dormido bem?",
+  "tu-quoque": "Você pode dizer que eu estou inventando. Mas você também lê horóscopo escondido, então não está em posição de reclamar.",
+  "vitima-perseguida": "A ciência oficial persegue gente como eu há séculos. Se incomodamos tanto, é sinal de que estamos certos.",
+  "ancoragem": "Uma leitura dessas custa quinhentos reais em qualquer lugar. Para você, hoje, sai por cinquenta. As cartas já começaram a fazer você economizar.",
+  "confirmacao": "Repare como tudo o que acertei até agora confirma o dom das cartas. O que não acertei, sinceramente, nem lembro mais.",
+  "disponibilidade": "Ontem mesmo vi na televisão um caso igualzinho ao seu. Isso anda acontecendo com todo mundo, pode acreditar.",
+  "dunning-kruger": "Fiz um curso de tarot de um fim de semana e já domino completamente a arte. Sinceramente, não há mais nada que eu precise aprender.",
+  "otimismo": "Fique tranquilo: com você vai dar tudo certo. Problema é coisa que só acontece com os outros.",
+  "pessimismo": "Eu não criaria muita expectativa. Do jeito que as coisas andam, é mais seguro esperar pelo pior.",
+  "projecao": "Eu, no seu lugar, estaria com uma vontade enorme de largar tudo e abrir uma pousada. Então é isso que você está sentindo.",
+  "representatividade": "Você tem toda a cara de quem nasceu para isso. E quem tem cara, para as cartas, já é meio caminho andado.",
+  "sobrevivencia": "Todos os clientes que voltaram aqui me disseram que a leitura acertou. Os que não voltaram, com certeza, estão ocupados demais sendo felizes."
+ }
+}

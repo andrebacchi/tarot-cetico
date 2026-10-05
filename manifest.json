@@ -1,0 +1,16 @@
+{
+  "name": "Tarot Cético",
+  "short_name": "Tarot Cético",
+  "description": "Versão digital do livro-jogo Tarot Cético: “cartomancia” racional, de André D. Bacchi.",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#110b1b",
+  "theme_color": "#231636",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
