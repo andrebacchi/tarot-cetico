@@ -377,6 +377,7 @@ dialog::backdrop{background:rgba(8,5,14,.82)}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
+.fora{border:1px solid var(--filete-forte);border-radius:6px;padding:10px 12px}
 </style>
 </head>
 <body>
@@ -450,7 +451,7 @@ dialog::backdrop{background:rgba(8,5,14,.82)}
     <p>Baseado no livro-jogo <cite>Tarot Cético: “cartomancia” racional</cite> (2023), de André Demambre Bacchi. <a href="https://drive.google.com/file/d/1Zi7Wb5T2tQAeCNduO-DvIcjNKGJ6-aE_/view" target="_blank" rel="noopener">Baixe o livro gratuitamente</a>.</p>
     <p>Os arquétipos são estereótipos extremos e não representam pessoas reais. Uso educacional.</p>
     <p>© André Demambre Bacchi. Todos os direitos reservados.</p>
-    <p class="versao">Versão 0.3</p>
+    <p class="versao">Versão 0.4</p>
   </footer>
 </div>
 </main>
@@ -583,6 +584,7 @@ dialog::backdrop{background:rgba(8,5,14,.82)}
     <p class="chapa">Aplicativo</p>
     <h3>Instalar o Tarot Cético</h3>
     <p>O Tarot Cético fica na tela inicial como um aplicativo, abre em tela cheia e funciona sem internet depois da primeira visita.</p>
+    <p class="fora" id="instalar-fora" hidden>Você abriu este app por dentro de outro, como o BACCHI LAB, e daqui não dá para instalar. Toque em <kbd>⋮</kbd> no alto da tela e em <b>Abrir no Chrome</b>; lá, toque de novo em <b>Instalar</b>.</p>
     <div class="abas" id="abas"></div>
     <ol class="passos" id="passos"></ol>
   </div>
@@ -1528,13 +1530,29 @@ async function abrirPartilha() {
 }
 
 /* ---------- instalar (padrão do BACCHI LAB) ---------- */
+/* Janela em que o app está rodando: "navegador" (aba comum), "propria" (instalado, na janela dele) ou "outra"
+   (aberto dentro de outro app instalado, como o BACCHI LAB). Neste último caso o Android também responde
+   display-mode: standalone, e o botão Instalar sumia para quem ainda não tinha o app: a diferença é de onde a página veio. */
+function janelaApp(k){
+  if(!(matchMedia("(display-mode: standalone)").matches||navigator.standalone===true))return"navegador";
+  let fora=false,marca=false;
+  try{const r=document.referrer&&new URL(document.referrer);fora=!!r&&r.origin===location.origin&&!r.pathname.startsWith(new URL("./",location.href).pathname);}catch(e){}
+  try{if(!document.referrer)localStorage.setItem(k,"1");if(!fora)sessionStorage.setItem(k,"1");marca=localStorage.getItem(k)==="1"||sessionStorage.getItem(k)==="1";}catch(e){}
+  return !fora||marca?"propria":"outra";
+}
+/* Confirmação do próprio navegador, quando ele sabe responder (Chrome no Android, pelo related_applications do manifest). */
+function appInstalado(k){
+  if(!navigator.getInstalledRelatedApps)return Promise.resolve(false);
+  return navigator.getInstalledRelatedApps().then(l=>{if(l.length){try{localStorage.setItem(k,"1");}catch(e){}}return l.length>0;}).catch(()=>false);
+}
 if (PWA) {
   const botao = $('#instalar-btn');
   let adiado = null;
-  const instalado = () => matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+  const JAN_K = 'tarot-cetico:instalado'; let janela = janelaApp(JAN_K);
   addEventListener('beforeinstallprompt', e => { e.preventDefault(); adiado = e; });
-  addEventListener('appinstalled', () => { botao.hidden = true; });
-  botao.hidden = instalado();
+  addEventListener('appinstalled', () => { try { localStorage.setItem(JAN_K, '1'); } catch (_) { /* sem armazenamento */ } botao.hidden = true; });
+  botao.hidden = janela === 'propria';   // só some na janela do próprio app instalado
+  if (janela === 'outra') appInstalado(JAN_K).then(ok => { if (ok) { janela = 'propria'; botao.hidden = true; } });
   const PASSOS = {
     ios: ['Abra esta página no <b>Safari</b>.', 'Toque em <b>Compartilhar</b> <kbd>⬆︎</kbd>.', 'Toque em <b>Adicionar à Tela de Início</b>.', 'Confirme o nome e toque em <b>Adicionar</b>.'],
     android: ['Abra esta página no <b>Chrome</b>.', 'Toque no menu <kbd>⋮</kbd>.', 'Toque em <b>Instalar app</b> ou <b>Adicionar à tela inicial</b>.', 'Confirme. O ícone aparece junto dos seus apps.'],
@@ -1549,6 +1567,7 @@ if (PWA) {
   $('#abas').addEventListener('click', e => { const b = e.target.closest('[data-aba]'); if (b) aba(b.dataset.aba); });
   botao.addEventListener('click', async () => {
     if (adiado) { try { adiado.prompt(); const r = await adiado.userChoice; adiado = null; if (r && r.outcome === 'accepted') return; } catch (_) { /* segue para as instruções */ } }
+    $('#instalar-fora').hidden = janela !== 'outra';
     aba(plataforma());
     $('#instalar').showModal();
   });

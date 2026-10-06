@@ -353,3 +353,4 @@ dialog::backdrop{background:rgba(8,5,14,.82)}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
+.fora{border:1px solid var(--filete-forte);border-radius:6px;padding:10px 12px}

@@ -7,7 +7,7 @@ A cada atualização publicada, aumente VERSAO: ela aparece no rodapé e renova 
 import json, os, re, sys, urllib.parse
 
 RAIZ = os.path.dirname(os.path.abspath(__file__))
-VERSAO = '0.3'
+VERSAO = '0.4'
 FIXOS = 'tarot-cetico-fixos-v1'   # cache das cartas e fontes; só mude se as imagens das cartas mudarem
 SITE = 'https://andrebacchi.github.io/tarot-cetico/'
 HUB = 'https://andrebacchi.github.io/bacchilab/'

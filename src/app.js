@@ -937,13 +937,29 @@ async function abrirPartilha() {
 }
 
 /* ---------- instalar (padrão do BACCHI LAB) ---------- */
+/* Janela em que o app está rodando: "navegador" (aba comum), "propria" (instalado, na janela dele) ou "outra"
+   (aberto dentro de outro app instalado, como o BACCHI LAB). Neste último caso o Android também responde
+   display-mode: standalone, e o botão Instalar sumia para quem ainda não tinha o app: a diferença é de onde a página veio. */
+function janelaApp(k){
+  if(!(matchMedia("(display-mode: standalone)").matches||navigator.standalone===true))return"navegador";
+  let fora=false,marca=false;
+  try{const r=document.referrer&&new URL(document.referrer);fora=!!r&&r.origin===location.origin&&!r.pathname.startsWith(new URL("./",location.href).pathname);}catch(e){}
+  try{if(!document.referrer)localStorage.setItem(k,"1");if(!fora)sessionStorage.setItem(k,"1");marca=localStorage.getItem(k)==="1"||sessionStorage.getItem(k)==="1";}catch(e){}
+  return !fora||marca?"propria":"outra";
+}
+/* Confirmação do próprio navegador, quando ele sabe responder (Chrome no Android, pelo related_applications do manifest). */
+function appInstalado(k){
+  if(!navigator.getInstalledRelatedApps)return Promise.resolve(false);
+  return navigator.getInstalledRelatedApps().then(l=>{if(l.length){try{localStorage.setItem(k,"1");}catch(e){}}return l.length>0;}).catch(()=>false);
+}
 if (PWA) {
   const botao = $('#instalar-btn');
   let adiado = null;
-  const instalado = () => matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+  const JAN_K = 'tarot-cetico:instalado'; let janela = janelaApp(JAN_K);
   addEventListener('beforeinstallprompt', e => { e.preventDefault(); adiado = e; });
-  addEventListener('appinstalled', () => { botao.hidden = true; });
-  botao.hidden = instalado();
+  addEventListener('appinstalled', () => { try { localStorage.setItem(JAN_K, '1'); } catch (_) { /* sem armazenamento */ } botao.hidden = true; });
+  botao.hidden = janela === 'propria';   // só some na janela do próprio app instalado
+  if (janela === 'outra') appInstalado(JAN_K).then(ok => { if (ok) { janela = 'propria'; botao.hidden = true; } });
   const PASSOS = {
     ios: ['Abra esta página no <b>Safari</b>.', 'Toque em <b>Compartilhar</b> <kbd>⬆︎</kbd>.', 'Toque em <b>Adicionar à Tela de Início</b>.', 'Confirme o nome e toque em <b>Adicionar</b>.'],
     android: ['Abra esta página no <b>Chrome</b>.', 'Toque no menu <kbd>⋮</kbd>.', 'Toque em <b>Instalar app</b> ou <b>Adicionar à tela inicial</b>.', 'Confirme. O ícone aparece junto dos seus apps.'],
@@ -958,6 +974,7 @@ if (PWA) {
   $('#abas').addEventListener('click', e => { const b = e.target.closest('[data-aba]'); if (b) aba(b.dataset.aba); });
   botao.addEventListener('click', async () => {
     if (adiado) { try { adiado.prompt(); const r = await adiado.userChoice; adiado = null; if (r && r.outcome === 'accepted') return; } catch (_) { /* segue para as instruções */ } }
+    $('#instalar-fora').hidden = janela !== 'outra';
     aba(plataforma());
     $('#instalar').showModal();
   });

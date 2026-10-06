@@ -6,6 +6,7 @@
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
+  "related_applications": [{ "platform": "webapp", "url": "https://andrebacchi.github.io/tarot-cetico/manifest.json" }],
   "background_color": "#110b1b",
   "theme_color": "#231636",
   "icons": [
