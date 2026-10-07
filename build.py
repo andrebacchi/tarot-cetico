@@ -7,7 +7,7 @@ A cada atualização publicada, aumente VERSAO: ela aparece no rodapé e renova 
 import json, os, re, sys, urllib.parse
 
 RAIZ = os.path.dirname(os.path.abspath(__file__))
-VERSAO = '0.4'
+VERSAO = '0.5'
 FIXOS = 'tarot-cetico-fixos-v1'   # cache das cartas e fontes; só mude se as imagens das cartas mudarem
 SITE = 'https://andrebacchi.github.io/tarot-cetico/'
 HUB = 'https://andrebacchi.github.io/bacchilab/'
@@ -50,6 +50,7 @@ js = (ler('app.js')
       .replace('__PWA__', 'false' if ARTEFATO else 'true')
       .replace('__FIXOS__', FIXOS))
 corpo = ler('body.html').replace('__LIVRO__', LIVRO).replace('__VERSAO__', VERSAO).replace('__HUB__', HUB)
+corpo = corpo.replace('__QR__', re.sub(r'>\s+<', '><', ler('qr.svg').strip()).replace('<svg ', '<svg role="img" aria-label="QR code para andrebacchi.github.io/tarot-cetico" '))
 
 miolo = f'''<title>{TITULO}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">

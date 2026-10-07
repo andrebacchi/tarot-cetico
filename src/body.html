@@ -4,7 +4,10 @@
 <div class="miolo capa">
   <div class="topo">
     <a class="marca" href="__HUB__">‹ BACCHI LAB</a>
-    <button class="btn pilula" type="button" id="instalar-btn" hidden>Instalar</button>
+    <div class="topo-lado">
+      <button class="btn pilula" type="button" id="qr-btn">QR code</button>
+      <button class="btn pilula" type="button" id="instalar-btn" hidden>Instalar</button>
+    </div>
   </div>
   <header class="abre">
     <div class="leque" id="leque" aria-hidden="true"></div>
@@ -192,6 +195,18 @@
 <dialog class="folha moldura" id="partilha" aria-label="Compartilhar a carta de hoje">
   <div class="fechar-linha"><button class="btn fechar" type="button" data-fechar>Fechar</button></div>
   <div class="truque-corpo" id="partilha-corpo"></div>
+</dialog>
+
+<dialog class="folha moldura qr" id="qr" aria-label="QR code do Tarot Cético">
+  <div class="fechar-linha"><button class="btn fechar" type="button" data-fechar>Fechar</button></div>
+  <div class="truque-corpo qr-corpo">
+    <p class="chapa">Abra no seu celular</p>
+    <h3>Tarot Cético</h3>
+    <div class="qr-quadro">__QR__</div>
+    <p class="qr-end" id="qr-end">andrebacchi.github.io/tarot-cetico</p>
+    <div class="qr-acoes"><button class="btn principal" type="button" id="qr-copiar">Copiar link</button><button class="btn" type="button" id="qr-partilhar" hidden>Compartilhar</button></div>
+    <p class="fonte">Aponte a câmera do celular para o código. QR Code é marca registrada da DENSO WAVE INCORPORATED.</p>
+  </div>
 </dialog>
 
 <dialog class="folha moldura" id="instalar" aria-label="Instalar o Tarot Cético">

@@ -936,6 +936,17 @@ async function abrirPartilha() {
   }
 }
 
+/* ---------- QR code do app (padrão do BACCHI LAB) ---------- */
+/* O desenho do QR é fixo (src/qr.svg, embutido pelo build): aponta para o endereço do app no ar. */
+$('#qr-btn').addEventListener('click', () => { $('#qr-partilhar').hidden = !navigator.share; $('#qr').showModal(); });
+$('#qr-copiar').addEventListener('click', async e => {
+  const b = e.currentTarget;
+  try { await navigator.clipboard.writeText(SITE); b.textContent = 'Link copiado'; }
+  catch (_) { const r = document.createRange(); r.selectNodeContents($('#qr-end')); const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = 'Selecionado: copie'; }
+  setTimeout(() => { b.textContent = 'Copiar link'; }, 2200);
+});
+$('#qr-partilhar').addEventListener('click', () => { navigator.share({ title: 'Tarot Cético', url: SITE }).catch(() => {}); });
+
 /* ---------- instalar (padrão do BACCHI LAB) ---------- */
 /* Janela em que o app está rodando: "navegador" (aba comum), "propria" (instalado, na janela dele) ou "outra"
    (aberto dentro de outro app instalado, como o BACCHI LAB). Neste último caso o Android também responde

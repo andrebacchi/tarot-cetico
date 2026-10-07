@@ -8,6 +8,7 @@ Publicação: GitHub Pages, branch `main`, raiz. Endereço: https://andrebacchi.
 - `src/` é a fonte. `sh build.sh` gera `index.html` e `sw.js` na raiz (os dois são arquivos gerados: não edite à mão).
   `sh build.sh artifact` gera `dist/artifact.html`, para pré-visualizar como artefato (sem instalação nem service worker; publique junto a pasta `cards/`).
 - `cards/` tem as 81 cartas (450 × 720, WebP, em tom de pergaminho). `icons/` tem os ícones do app.
+- `src/qr.svg`: QR code do endereço do app, embutido pelo build (botão "QR code" da capa). É fixo; foi gerado com o `qrcode.js` do repositório `bacchilab` (nível M).
 - `tools/` tem os scripts que geraram os dados a partir do livro. Só são necessários se o texto ou as artes do livro mudarem.
 
 ## Onde fica cada texto

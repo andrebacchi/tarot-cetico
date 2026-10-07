@@ -1,6 +1,6 @@
 /* Tarot Cético: funciona sem internet depois da primeira visita.
    Este arquivo é gerado pelo build (python3 build.py) a partir de src/sw.js; a versão vem de VERSAO no build.py. */
-const APP = 'tarot-cetico-app-0.4';   // página e ícones: troca a cada versão
+const APP = 'tarot-cetico-app-0.5';   // página e ícones: troca a cada versão
 const FIXOS = 'tarot-cetico-fixos-v1';                   // cartas e fontes: raramente mudam
 // Todos os apps dividem andrebacchi.github.io: apague só os caches deste app.
 const PREFIXO = 'tarot-cetico-';

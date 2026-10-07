@@ -77,7 +77,18 @@ h1{font:400 clamp(48px,13vw,96px)/.98 var(--titulo);letter-spacing:.005em;color:
 .topo{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:40px;margin-bottom:-18px}
 .marca{font:500 12.5px/1 var(--rotulo);letter-spacing:.18em;text-transform:uppercase;color:var(--nevoa);text-decoration:none}
 .marca:hover{color:var(--latao-claro)}
-.pilula{min-height:38px;padding:6px 18px;border-radius:999px;font-size:14.5px}
+.pilula{min-height:38px;padding:6px 18px;border-radius:999px;font-size:14.5px;white-space:nowrap}
+.marca{white-space:nowrap}
+.topo-lado{display:flex;align-items:center;gap:8px}
+@media (max-width:420px){.pilula{padding:6px 12px}.marca{letter-spacing:.1em}}
+/* QR code do app: grande e sobre branco, para ler de longe quando projetado */
+dialog.qr{width:min(620px,calc(100vw - 20px))}
+.qr-corpo{display:grid;gap:12px;justify-items:center;text-align:center}
+.qr-corpo h3,.qr-corpo p{margin-bottom:0}
+.qr-quadro{width:min(100%,60vh);padding:10px;border-radius:8px;background:#fff}
+.qr-quadro svg{display:block;width:100%;height:auto}
+.qr-end{font:700 clamp(16px,4.2vw,22px)/1.3 var(--rotulo);letter-spacing:.02em;overflow-wrap:anywhere;-webkit-user-select:all;user-select:all}
+.qr-acoes{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
 @media (min-width:820px){
   .capa{gap:44px;padding-block:34px 40px}
   .abre{grid-template-columns:minmax(0,.85fr) minmax(0,1fr);gap:28px}

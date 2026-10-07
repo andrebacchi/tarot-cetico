@@ -101,7 +101,18 @@ h1{font:400 clamp(48px,13vw,96px)/.98 var(--titulo);letter-spacing:.005em;color:
 .topo{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:40px;margin-bottom:-18px}
 .marca{font:500 12.5px/1 var(--rotulo);letter-spacing:.18em;text-transform:uppercase;color:var(--nevoa);text-decoration:none}
 .marca:hover{color:var(--latao-claro)}
-.pilula{min-height:38px;padding:6px 18px;border-radius:999px;font-size:14.5px}
+.pilula{min-height:38px;padding:6px 18px;border-radius:999px;font-size:14.5px;white-space:nowrap}
+.marca{white-space:nowrap}
+.topo-lado{display:flex;align-items:center;gap:8px}
+@media (max-width:420px){.pilula{padding:6px 12px}.marca{letter-spacing:.1em}}
+/* QR code do app: grande e sobre branco, para ler de longe quando projetado */
+dialog.qr{width:min(620px,calc(100vw - 20px))}
+.qr-corpo{display:grid;gap:12px;justify-items:center;text-align:center}
+.qr-corpo h3,.qr-corpo p{margin-bottom:0}
+.qr-quadro{width:min(100%,60vh);padding:10px;border-radius:8px;background:#fff}
+.qr-quadro svg{display:block;width:100%;height:auto}
+.qr-end{font:700 clamp(16px,4.2vw,22px)/1.3 var(--rotulo);letter-spacing:.02em;overflow-wrap:anywhere;-webkit-user-select:all;user-select:all}
+.qr-acoes{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
 @media (min-width:820px){
   .capa{gap:44px;padding-block:34px 40px}
   .abre{grid-template-columns:minmax(0,.85fr) minmax(0,1fr);gap:28px}
@@ -388,7 +399,10 @@ dialog::backdrop{background:rgba(8,5,14,.82)}
 <div class="miolo capa">
   <div class="topo">
     <a class="marca" href="https://andrebacchi.github.io/bacchilab/">‹ BACCHI LAB</a>
-    <button class="btn pilula" type="button" id="instalar-btn" hidden>Instalar</button>
+    <div class="topo-lado">
+      <button class="btn pilula" type="button" id="qr-btn">QR code</button>
+      <button class="btn pilula" type="button" id="instalar-btn" hidden>Instalar</button>
+    </div>
   </div>
   <header class="abre">
     <div class="leque" id="leque" aria-hidden="true"></div>
@@ -451,7 +465,7 @@ dialog::backdrop{background:rgba(8,5,14,.82)}
     <p>Baseado no livro-jogo <cite>Tarot Cético: “cartomancia” racional</cite> (2023), de André Demambre Bacchi. <a href="https://drive.google.com/file/d/1Zi7Wb5T2tQAeCNduO-DvIcjNKGJ6-aE_/view" target="_blank" rel="noopener">Baixe o livro gratuitamente</a>.</p>
     <p>Os arquétipos são estereótipos extremos e não representam pessoas reais. Uso educacional.</p>
     <p>© André Demambre Bacchi. Todos os direitos reservados.</p>
-    <p class="versao">Versão 0.4</p>
+    <p class="versao">Versão 0.5</p>
   </footer>
 </div>
 </main>
@@ -576,6 +590,18 @@ dialog::backdrop{background:rgba(8,5,14,.82)}
 <dialog class="folha moldura" id="partilha" aria-label="Compartilhar a carta de hoje">
   <div class="fechar-linha"><button class="btn fechar" type="button" data-fechar>Fechar</button></div>
   <div class="truque-corpo" id="partilha-corpo"></div>
+</dialog>
+
+<dialog class="folha moldura qr" id="qr" aria-label="QR code do Tarot Cético">
+  <div class="fechar-linha"><button class="btn fechar" type="button" data-fechar>Fechar</button></div>
+  <div class="truque-corpo qr-corpo">
+    <p class="chapa">Abra no seu celular</p>
+    <h3>Tarot Cético</h3>
+    <div class="qr-quadro"><svg role="img" aria-label="QR code para andrebacchi.github.io/tarot-cetico" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 37" shape-rendering="crispEdges"><rect width="37" height="37" fill="#fff"/><path d="M2 2h7v1h-7zM11 2h3v1h-3zM20 2h4v1h-4zM25 2h1v1h-1zM28 2h7v1h-7zM2 3h1v1h-1zM8 3h1v1h-1zM11 3h2v1h-2zM14 3h1v1h-1zM17 3h2v1h-2zM20 3h1v1h-1zM22 3h2v1h-2zM28 3h1v1h-1zM34 3h1v1h-1zM2 4h1v1h-1zM4 4h3v1h-3zM8 4h1v1h-1zM10 4h2v1h-2zM13 4h2v1h-2zM16 4h1v1h-1zM18 4h1v1h-1zM21 4h4v1h-4zM28 4h1v1h-1zM30 4h3v1h-3zM34 4h1v1h-1zM2 5h1v1h-1zM4 5h3v1h-3zM8 5h1v1h-1zM10 5h1v1h-1zM12 5h1v1h-1zM20 5h1v1h-1zM23 5h1v1h-1zM26 5h1v1h-1zM28 5h1v1h-1zM30 5h3v1h-3zM34 5h1v1h-1zM2 6h1v1h-1zM4 6h3v1h-3zM8 6h1v1h-1zM10 6h2v1h-2zM14 6h6v1h-6zM22 6h3v1h-3zM28 6h1v1h-1zM30 6h3v1h-3zM34 6h1v1h-1zM2 7h1v1h-1zM8 7h1v1h-1zM10 7h2v1h-2zM15 7h2v1h-2zM20 7h2v1h-2zM25 7h2v1h-2zM28 7h1v1h-1zM34 7h1v1h-1zM2 8h7v1h-7zM10 8h1v1h-1zM12 8h1v1h-1zM14 8h1v1h-1zM16 8h1v1h-1zM18 8h1v1h-1zM20 8h1v1h-1zM22 8h1v1h-1zM24 8h1v1h-1zM26 8h1v1h-1zM28 8h7v1h-7zM10 9h1v1h-1zM12 9h3v1h-3zM16 9h1v1h-1zM18 9h1v1h-1zM21 9h3v1h-3zM25 9h1v1h-1zM2 10h1v1h-1zM4 10h5v1h-5zM13 10h1v1h-1zM15 10h2v1h-2zM19 10h1v1h-1zM21 10h1v1h-1zM24 10h3v1h-3zM28 10h5v1h-5zM3 11h2v1h-2zM9 11h2v1h-2zM12 11h1v1h-1zM15 11h2v1h-2zM18 11h2v1h-2zM21 11h2v1h-2zM25 11h1v1h-1zM28 11h2v1h-2zM31 11h2v1h-2zM34 11h1v1h-1zM4 12h7v1h-7zM13 12h7v1h-7zM24 12h1v1h-1zM26 12h2v1h-2zM30 12h1v1h-1zM32 12h2v1h-2zM2 13h2v1h-2zM5 13h2v1h-2zM10 13h1v1h-1zM14 13h2v1h-2zM17 13h1v1h-1zM19 13h4v1h-4zM25 13h2v1h-2zM30 13h3v1h-3zM34 13h1v1h-1zM3 14h1v1h-1zM6 14h1v1h-1zM8 14h1v1h-1zM12 14h3v1h-3zM16 14h1v1h-1zM18 14h1v1h-1zM21 14h4v1h-4zM26 14h2v1h-2zM30 14h2v1h-2zM2 15h1v1h-1zM4 15h2v1h-2zM9 15h1v1h-1zM13 15h1v1h-1zM17 15h1v1h-1zM20 15h1v1h-1zM23 15h1v1h-1zM26 15h1v1h-1zM28 15h1v1h-1zM31 15h1v1h-1zM33 15h2v1h-2zM5 16h2v1h-2zM8 16h4v1h-4zM13 16h2v1h-2zM17 16h2v1h-2zM22 16h2v1h-2zM27 16h2v1h-2zM31 16h1v1h-1zM33 16h1v1h-1zM5 17h3v1h-3zM9 17h5v1h-5zM16 17h2v1h-2zM20 17h1v1h-1zM23 17h3v1h-3zM27 17h2v1h-2zM31 17h2v1h-2zM2 18h2v1h-2zM7 18h3v1h-3zM12 18h1v1h-1zM17 18h1v1h-1zM19 18h1v1h-1zM24 18h2v1h-2zM27 18h1v1h-1zM29 18h3v1h-3zM34 18h1v1h-1zM2 19h1v1h-1zM4 19h1v1h-1zM6 19h1v1h-1zM13 19h2v1h-2zM16 19h1v1h-1zM18 19h1v1h-1zM20 19h2v1h-2zM23 19h1v1h-1zM25 19h1v1h-1zM28 19h2v1h-2zM31 19h4v1h-4zM2 20h2v1h-2zM7 20h6v1h-6zM17 20h1v1h-1zM20 20h1v1h-1zM22 20h2v1h-2zM26 20h1v1h-1zM28 20h3v1h-3zM32 20h2v1h-2zM2 21h2v1h-2zM7 21h1v1h-1zM11 21h2v1h-2zM16 21h1v1h-1zM18 21h1v1h-1zM23 21h2v1h-2zM27 21h1v1h-1zM29 21h5v1h-5zM4 22h2v1h-2zM8 22h2v1h-2zM11 22h1v1h-1zM13 22h2v1h-2zM20 22h2v1h-2zM23 22h1v1h-1zM26 22h2v1h-2zM29 22h3v1h-3zM2 23h2v1h-2zM6 23h1v1h-1zM14 23h6v1h-6zM22 23h5v1h-5zM28 23h1v1h-1zM31 23h2v1h-2zM34 23h1v1h-1zM2 24h1v1h-1zM4 24h1v1h-1zM8 24h1v1h-1zM10 24h2v1h-2zM13 24h2v1h-2zM16 24h1v1h-1zM20 24h2v1h-2zM30 24h1v1h-1zM32 24h2v1h-2zM2 25h1v1h-1zM5 25h3v1h-3zM9 25h1v1h-1zM11 25h4v1h-4zM16 25h1v1h-1zM18 25h1v1h-1zM20 25h6v1h-6zM27 25h1v1h-1zM29 25h1v1h-1zM32 25h3v1h-3zM2 26h1v1h-1zM4 26h1v1h-1zM7 26h4v1h-4zM12 26h1v1h-1zM16 26h1v1h-1zM19 26h1v1h-1zM21 26h1v1h-1zM24 26h7v1h-7zM34 26h1v1h-1zM10 27h1v1h-1zM13 27h4v1h-4zM19 27h1v1h-1zM21 27h2v1h-2zM26 27h1v1h-1zM30 27h1v1h-1zM32 27h1v1h-1zM34 27h1v1h-1zM2 28h7v1h-7zM12 28h1v1h-1zM17 28h1v1h-1zM19 28h1v1h-1zM24 28h3v1h-3zM28 28h1v1h-1zM30 28h1v1h-1zM32 28h2v1h-2zM2 29h1v1h-1zM8 29h1v1h-1zM10 29h2v1h-2zM14 29h1v1h-1zM16 29h1v1h-1zM19 29h2v1h-2zM25 29h2v1h-2zM30 29h3v1h-3zM2 30h1v1h-1zM4 30h3v1h-3zM8 30h1v1h-1zM10 30h1v1h-1zM12 30h2v1h-2zM16 30h3v1h-3zM21 30h4v1h-4zM26 30h6v1h-6zM33 30h1v1h-1zM2 31h1v1h-1zM4 31h3v1h-3zM8 31h1v1h-1zM10 31h1v1h-1zM12 31h2v1h-2zM15 31h1v1h-1zM17 31h1v1h-1zM20 31h1v1h-1zM23 31h1v1h-1zM27 31h1v1h-1zM30 31h2v1h-2zM34 31h1v1h-1zM2 32h1v1h-1zM4 32h3v1h-3zM8 32h1v1h-1zM10 32h3v1h-3zM14 32h2v1h-2zM17 32h2v1h-2zM22 32h1v1h-1zM25 32h1v1h-1zM28 32h2v1h-2zM31 32h2v1h-2zM2 33h1v1h-1zM8 33h1v1h-1zM13 33h3v1h-3zM17 33h1v1h-1zM23 33h2v1h-2zM30 33h3v1h-3zM2 34h7v1h-7zM10 34h8v1h-8zM19 34h1v1h-1zM24 34h6v1h-6zM33 34h1v1h-1z" fill="#161a22"/></svg></div>
+    <p class="qr-end" id="qr-end">andrebacchi.github.io/tarot-cetico</p>
+    <div class="qr-acoes"><button class="btn principal" type="button" id="qr-copiar">Copiar link</button><button class="btn" type="button" id="qr-partilhar" hidden>Compartilhar</button></div>
+    <p class="fonte">Aponte a câmera do celular para o código. QR Code é marca registrada da DENSO WAVE INCORPORATED.</p>
+  </div>
 </dialog>
 
 <dialog class="folha moldura" id="instalar" aria-label="Instalar o Tarot Cético">
@@ -1528,6 +1554,17 @@ async function abrirPartilha() {
     $('#previa').innerHTML = '<p class="erro">Não foi possível montar a imagem neste aparelho.</p>';
   }
 }
+
+/* ---------- QR code do app (padrão do BACCHI LAB) ---------- */
+/* O desenho do QR é fixo (src/qr.svg, embutido pelo build): aponta para o endereço do app no ar. */
+$('#qr-btn').addEventListener('click', () => { $('#qr-partilhar').hidden = !navigator.share; $('#qr').showModal(); });
+$('#qr-copiar').addEventListener('click', async e => {
+  const b = e.currentTarget;
+  try { await navigator.clipboard.writeText(SITE); b.textContent = 'Link copiado'; }
+  catch (_) { const r = document.createRange(); r.selectNodeContents($('#qr-end')); const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = 'Selecionado: copie'; }
+  setTimeout(() => { b.textContent = 'Copiar link'; }, 2200);
+});
+$('#qr-partilhar').addEventListener('click', () => { navigator.share({ title: 'Tarot Cético', url: SITE }).catch(() => {}); });
 
 /* ---------- instalar (padrão do BACCHI LAB) ---------- */
 /* Janela em que o app está rodando: "navegador" (aba comum), "propria" (instalado, na janela dele) ou "outra"
